@@ -1,0 +1,20 @@
+h1 {
+    color: rgb(28, 63, 75);
+}
+
+img {
+    width: auto;
+    height: 500px;
+}
+
+body {
+    background: rgb(107, 160, 179);
+}
+
+.green {
+    background: rgb(115, 164, 136);
+}
+
+.body-color {
+    background: hsl(0, 100, 100);
+}
