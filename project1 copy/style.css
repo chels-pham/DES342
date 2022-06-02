@@ -59,10 +59,65 @@
 }
 
 .button a:link, .start a:visited {
-  color: #ec3232;
+  color: #c87f13;
 }
 
 .button a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+.button-1 {
+  display: inline-block;
+  border-radius: 35px;
+  color: white;
+  background-color: #f3b253;
+  text-align: center;
+  font: 20px Raleway;
+  padding: 6px 40px;
+  width: 160px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20%;
+  justify-content: center;
+}
+
+.button-1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.button-1:hover {
+  background-color: #c87f13;
+  color: white;
+}
+
+.button-1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
+}
+
+.button-1:hover span {
+  padding-right: 25px;
+}
+
+.button-1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-1 a:link, .start a:visited {
+  color: #c87f13;
+}
+
+.button-1 a:hover {
   color: rgb(255, 255, 255);
 }
 

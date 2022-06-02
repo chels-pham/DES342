@@ -5,12 +5,37 @@
   <title>Section 3</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="style.css">
-
 </head>
+<style>
+.scroll-down::before {
+  animation: bounce 1s ease infinite;
+  bottom: 2rem;
+  color: rgb(62, 62, 62);
+  content: '╲╱';
+  font-size: 2rem;
+  height: 3rem;
+  left: 60%;
+  bottom: 12%;
+  letter-spacing: -1px;
+  line-height: 4rem;
+  margin-left: -3rem;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;
+  width: 6rem;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-50%);
+  }
+}
+</style>
 <body>
 <div class="container">
   <section class="section3-bg">
     <div class="content-wrapper">
+      <div class="scroll-down"></div>
       <p class="content-subtitle">
         When Pandora knew Epimetheus was out of sight, she would <br>
         untie the heavy gold cords that kept the box securely <br>
@@ -20,6 +45,7 @@
   </section>
   <section class="section3-bg">
     <div class="content-wrapper">
+      <div class="scroll-down"></div>
       <p class="content-subtitle">
         She longed to give in to temptation and open the box, <br>
         but she always re-tied the cords and returned the box <br>
