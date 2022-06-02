@@ -1,87 +1,69 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-  
-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 16px 10%;
-  background-color: #000000;
-}
-  
-.logo {
-  margin-right: auto;
-}
-
-img[src*="logo"] {
-  width: 25%;
-}
-
-.navigation {
-  list-style: none;
-  display: flex;
-}
-
-.navigation a,
-.cta {
-  color: rgb(140, 140, 140);
-  text-decoration: none;
+.homepage {
+  position: absolute;
   font: 20px Raleway;
-  margin: 0px 15px;
-  padding: 5px 5px;
-  position: relative;
-  z-index: 0;
+  margin: 10%;
+}
+
+.the-end {
+  position: absolute;
+  font: 20px Raleway;
+  margin: 10%;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 35px;
+  color: white;
+  background-color: #f3b253;
+  text-align: center;
+  font: 20px Raleway;
+  padding: 6px 40px;
+  width: 160px;
+  transition: all 0.3s;
   cursor: pointer;
+  margin: 10%;
+  position: relative;
+  top: 220px;
 }
 
-.navigation li {
-  padding: 0px 20px;
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
 }
 
-.navigation li a:before
-{
+.button:hover {
+  background-color: #c87f13;
+  color: white;
+}
+
+.button span:after {
+  content: '\00bb';
   position: absolute;
   opacity: 0;
-  width: 0%;
-  height: 2px;
-  content: '';
-  background: #ec3232;
-  transition: all 0.3s;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
 }
 
-.navigation li a:before
-{
-  left: 0px;
-  bottom: 0px;
+.button:hover span {
+  padding-right: 25px;
 }
 
-.navigation li a:hover
-{
-  color: #FFF; 
-}
-
-.navigation li a:hover:before
-{
+.button:hover span:after {
   opacity: 1;
-  width: 100%;
+  right: 0;
 }
 
-.navigation .current {
-  color: #FFF;
+.button a:link, .start a:visited {
+  color: #ec3232;
 }
 
-.navigation a.current:before {
-  position: absolute;
-  opacity: 1;
-  width: 100%;
-  height: 2px;
-  content: '';
-  background: #ec3232;
+.button a:hover {
+  color: rgb(255, 255, 255);
 }
 
 body.section-1-bg {
@@ -93,16 +75,7 @@ body.section-1-bg {
   background-size: cover;
  }
 
-body.section-2-bg {
-  background-image: url("images/section2-1_illustration.png") ;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
- }
-
-body.section-4-bg {
+ body.section-4-bg {
   background-image: url("images/section4_illustration.png") ;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -111,8 +84,8 @@ body.section-4-bg {
   background-size: cover;
  }
 
-body.homepage-bg {
-  background-image: url("images/homepage.png") ;
+body.section-5-bg {
+  background-image: url("images/section5_illustration.png") ;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -120,8 +93,8 @@ body.homepage-bg {
   background-size: cover;
  }
 
-body.about-bg {
-  background-image: url("images/about.png") ;
+body.homepage-bg {
+  background-image: url("images/homepage-1.png") ;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -130,7 +103,7 @@ body.about-bg {
  }
 
 body.the-end-bg {
-  background-image: url("images/the-end.png") ;
+  background-image: url("images/the_end.png") ;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -143,11 +116,6 @@ body.the-end-bg {
   top: 300px;
   right: 500px;
   font: 20px Raleway;
-  animation: fadeIn linear 4s;
-  -webkit-animation: fadeIn linear 4s;
-  -moz-animation: fadeIn linear 4s;
-  -o-animation: fadeIn linear 4s;
-  -ms-animation: fadeIn linear 4s;
 }
 
 .section-2 {
@@ -204,142 +172,6 @@ body.the-end-bg {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
-.scrolldown {
-  width: 60px;
-  height: 72px;
-  margin-left: -30px;
-  bottom: 90px;
-}
-
-.arrows path {
-  stroke: rgb(140, 140, 140);
-  fill: transparent;
-  stroke-width: 1px;  
-  animation: arrow 2s infinite;
-  -webkit-animation: arrow 2s infinite; 
-}
-
-@keyframes arrow
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-@-webkit-keyframes arrow /*Safari and Chrome*/
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-.arrows path.a1 {
-  animation-delay:-1s;
-  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-}
-
-.arrows path.a2 {
-  animation-delay:-0.5s;
-  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-}
-
-.arrows path.a3 { 
-  animation-delay:0s;
-  -webkit-animation-delay:0s; /* Safari 和 Chrome */
-}
-
-#scroll-down {
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  font: 20px Raleway;
-  font-size:14px;
-  letter-spacing:.1em;
-  color: rgb(140, 140, 140);
-  position: fixed;
-  right: 1%;
-  text-align: center;
-  bottom: 40px;
-  border: 1px solid red;
-}
-
-.homepage {
-  position: absolute;
-  font: 20px Raleway;
-  margin: 10%;
-}
-
-.contents {
-  position: absolute;
-  font: 20px Raleway;
-  margin: 10%;
-}
-
-.the-end {
-  position: absolute;
-  font: 20px Raleway;
-  margin: 10%;
-}
-
-.button {
-  display: inline-block;
-  border-radius: 35px;
-  border: 2px solid #ec3232;
-  color: #ec3232;
-  background-color: #ffffff;
-  text-align: center;
-  font: 20px Raleway;
-  padding: 6px 40px;
-  width: 160px;
-  transition: all 0.3s;
-  cursor: pointer;
-  margin: 10%;
-  position: relative;
-  top: 200px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background-color: #ec3232;
-  color: white;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.3s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.button a:link, .start a:visited {
-  color: #ec3232;
-}
-
-.button a:hover {
-  color: rgb(255, 255, 255);
-}
-
-
 
 /*Section 2 slideshow*/
 .slideshow {
@@ -508,4 +340,100 @@ body.the-end-bg {
   height: 26px;
   fill: rgb(0, 0, 0);
   transition: left 0.2s ease;
+}
+
+
+.section3-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 130vh;
+  position: fixed;
+  width: 100%;
+  transform: translateY(30vh);
+  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+.section3-bg:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.section3-bg:first-child {
+  background-image: url(images/section3-3_illustration.png);
+  transform: translateY(-15vh);
+}
+.section3-bg:first-child .content-wrapper {
+  transform: translateY(15vh);
+}
+.section3-bg:nth-child(2) {
+  background-image: url(images/section3-2_illustration.png);
+}
+.section3-bg:nth-child(3) {
+  background-image: url(images/section3-3_illustration.png);
+}
+
+/* Set stacking context of slides */
+.section3-bg:nth-child(1) {
+  z-index: 3;
+}
+
+.section3-bg:nth-child(2) {
+  z-index: 2;
+}
+
+.section3-bg:nth-child(3) {
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 20px Raleway;
+  transform: translateY(40vh);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.section3-bg.up-scroll {
+  transform: translate3d(0, -15vh, 0);
+}
+.section3-bg.up-scroll .content-wrapper {
+  transform: translateY(15vh);
+}
+.section3-bg.up-scroll + .section3-bg {
+  transform: translate3d(0, 30vh, 0);
+}
+.section3-bg.up-scroll + .section3-bg .content-wrapper {
+  transform: translateY(30vh);
+}
+
+.section3-bg.down-scroll {
+  transform: translate3d(0, -130vh, 0);
+}
+.section3-bg.down-scroll .content-wrapper {
+  transform: translateY(40vh);
+}
+.section3-bg.down-scroll + .section3-bg:not(.down-scroll) {
+  transform: translate3d(0, -15vh, 0);
+}
+.section3-bg.down-scroll + .section3-bg:not(.down-scroll) .content-wrapper {
+  transform: translateY(15vh);
 }

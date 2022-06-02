@@ -1,0 +1,101 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body {
+  overflow: hidden;
+}
+
+.section3-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 130vh;
+  position: fixed;
+  width: 100%;
+  transform: translateY(30vh);
+  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+.section3-bg:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.section3-bg:first-child {
+  background-image: url(https://i.postimg.cc/kXq9Qmnj/bgd1.jpg);
+  transform: translateY(-15vh);
+}
+.section3-bg:first-child .content-wrapper {
+  transform: translateY(15vh);
+}
+.section3-bg:nth-child(2) {
+  background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
+}
+.section3-bg:nth-child(3) {
+  background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
+}
+
+/* Set stacking context of slides */
+.section3-bg:nth-child(1) {
+  z-index: 3;
+}
+
+.section3-bg:nth-child(2) {
+  z-index: 2;
+}
+
+.section3-bg:nth-child(3) {
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 20px Raleway;
+  transform: translateY(40vh);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.section3-bg.up-scroll {
+  transform: translate3d(0, -15vh, 0);
+}
+.section3-bg.up-scroll .content-wrapper {
+  transform: translateY(15vh);
+}
+.section3-bg.up-scroll + .section3-bg {
+  transform: translate3d(0, 30vh, 0);
+}
+.section3-bg.up-scroll + .section3-bg .content-wrapper {
+  transform: translateY(30vh);
+}
+
+.section3-bg.down-scroll {
+  transform: translate3d(0, -130vh, 0);
+}
+.section3-bg.down-scroll .content-wrapper {
+  transform: translateY(40vh);
+}
+.section3-bg.down-scroll + .section3-bg:not(.down-scroll) {
+  transform: translate3d(0, -15vh, 0);
+}
+.section3-bg.down-scroll + .section3-bg:not(.down-scroll) .content-wrapper {
+  transform: translateY(15vh);
+}

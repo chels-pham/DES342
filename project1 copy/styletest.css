@@ -1,0 +1,73 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+body {
+    margin: 0;
+  }
+  .scene1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  .blue-sky,
+  .clouds,
+  .people {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0;
+  }
+  .clouds {
+    animation: fade-in 2s 2s forwards;
+  }
+  .people {
+    animation: fade-in 2s 3.5s forwards;
+  }
+  .blue-sky {
+    animation: fade-in 2s 0.5s forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .section-1-text {
+    position: absolute;
+    top: 200px;
+    right: 500px;
+    font: 20px Raleway;
+  }
+
+  .slideshow .sliders .slider {
+    margin: -33px 0 0;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .slideshow .sliders .prev {
+    left: 30px;
+  }
+  .slideshow .sliders .prev:hover .svg {
+    left: -10px;
+  }
+  .slideshow .sliders .next {
+    right: 30px;
+  }
+  .slideshow .sliders .next:hover .svg {
+    left: 10px;
+  }
+  .slideshow .sliders .svg {
+    position: relative;
+    left: 0;
+    width: 14px;
+    height: 26px;
+    fill: rgb(0, 0, 0);
+    transition: left 0.2s ease;
+  }

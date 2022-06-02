@@ -181,7 +181,7 @@ function homeSlideshowParallax(){
 $(document).ready(function() {
  $('.slide').addClass('is-loaded');
 
- $('.slideshow .arrows .arrow').on('click',function(){
+ $('.slideshow .sliders .slider').on('click',function(){
   slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
 });
 
