@@ -423,7 +423,7 @@ body.the-end-bg {
   bottom: 0;
 }
 .section3-bg:first-child {
-  background-image: url(images/section3-3_illustration.png);
+  background-image: url(images/section3-1_illustration.png);
   transform: translateY(-15vh);
 }
 .section3-bg:first-child .content-wrapper {

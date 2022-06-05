@@ -1,7 +1,7 @@
 var slideshowDuration = 4000;
 var slideshow=$('.main-content .slideshow');
 
-function slideshowSwitch(slideshow,index,auto){
+function slideshowSwitch(slideshow,index){
   if(slideshow.data('wait')) return;
 
   var slides = slideshow.find('.slide');
