@@ -1,15 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Section 4</title>
-  <link rel="stylesheet" href="style.css">
 </head>
+<style>
+  @import 'https://fonts.googleapis.com/css?family=Raleway';
+
+  .section-4 {
+  position: absolute;
+  font: 20px Raleway;
+  margin: 10%;
+  color: white;
+  position: absolute;
+  bottom: 100px;
+  }
+  .section-4-1 {
+  position: absolute;
+  font: 20px Raleway;
+  margin: 10%;
+  color: white;
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  body.box-up-page {
+      background-image: url('images/box-bg.png');
+      background-size: cover;
+  }
+  main {
+      height: 100vh;
+      width:100vw;
+      position: relative;
+      overflow:hidden;
+  }
+  .bg {
+      width:100vw;
+  }
+  .bg-img {
+      width:100%;
+      z-index:-2;
+      position: absolute;
+      top: -70vh;
+      left:0;
+      animation-name: bg-down;
+      animation-duration: 8s;
+      animation-fill-mode: forwards;
+      animation-delay:2s;
+  }
+  @keyframes bg-down {
+      0%{top: -70vh; }
+      100%{top: 0vh; }
+  }
+  
+  .box-div .box-whole {
+      width:20vw;
+      position: absolute;
+      bottom: 5vh;
+      left:40vw;
+      z-index:-1;
+  }
+  .box-div .box-front {
+      width:20vw;
+      position: absolute;
+      bottom: 4.3vh;
+      left:40vw;
+      z-index:99;
+  }
+
+  .red {
+      animation-delay: 1s;
+      animation-duration: 6s;
+      width:10vw;
+      position: absolute;
+      bottom: 6vh;
+      left:40vw;
+      animation-name: float-up;
+      animation-fill-mode:forwards;
+      animation-timing-function:linear;
+  }
+  .blue {
+      animation-delay: 3s;
+      animation-duration: 6s;
+      width:10vw;
+      position: absolute;
+      bottom: 9vh;
+      left:40vw;
+      animation-name: float-up-1;
+      animation-fill-mode:forwards;
+      animation-timing-function:linear;
+  }
+
+  .yellow {
+    animation-delay: 3s;
+    animation-duration: 6s;
+    width:10vw;
+    position: absolute;
+    bottom: 6vh;
+    left:45vw;
+    animation-name: float-up-2;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+
+.green {
+    animation-delay: 4s;
+    animation-duration: 7s;
+    width:10vw;
+    position: absolute;
+    bottom: 6vh;
+    left:45vw;
+    animation-name: float-up-3;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+
+.pink {
+    animation-delay: 3s;
+    animation-duration: 7s;
+    width:10vw;
+    position: absolute;
+    bottom: 6vh;
+    left:45vw;
+    animation-name: float-up-4;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+
+@keyframes float-up {
+    0% { transform:translateY(0) translateX(0);}
+    50% { transform:translateY(-45vh)translateX(-3vw);}
+    75% { transform:translateY(-80vh)translateX(3vw);}
+    100% { transform:translateY(-110vh) translateX(-3vw);}
+}
+  
+@keyframes float-up-1 {
+      0% { transform:translateY(0) translateX(0);}
+      50% { transform:translateY(-45vh)translateX(3vw);}
+      75% { transform:translateY(-80vh)translateX(-4vw);}
+      100% { transform:translateY(-110vh) translateX(1vw);}
+}
+
+@keyframes float-up-2 {
+    0% { transform:translateY(0) translateX(0);}
+    50% { transform:translateY(-50vh)translateX(10vw);}
+    75% { transform:translateY(-100vh)translateX(3vw);}
+    100% { transform:translateY(-110vh) translateX(-3vw);}
+}
+
+@keyframes float-up-3 {
+    0% { transform:translateY(0) translateX(0);}
+    50% { transform:translateY(-50vh)translateX(-1vw);}
+    75% { transform:translateY(-100vh)translateX(6vw);}
+    100% { transform:translateY(-110vh) translateX(-3vw);}
+}
+
+@keyframes float-up-4 {
+    0% { transform:translateY(0) translateX(0);}
+    50% { transform:translateY(-50vh)translateX(-8vw);}
+    75% { transform:translateY(-100vh)translateX(1vw);}
+    100% { transform:translateY(-110vh) translateX(-5vw);}
+}
+
+
+.slideshow .sliders .slider {
+  margin: -33px 0 0;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 3;
+}
+.slideshow .sliders .prev {
+  left: 30px;
+}
+.slideshow .sliders .prev:hover .svg {
+  left: -10px;
+}
+.slideshow .sliders .next {
+  right: 30px;
+}
+.slideshow .sliders .next:hover .svg {
+  left: 10px;
+}
+.slideshow .sliders .svg {
+  position: relative;
+  left: 0;
+  width: 14px;
+  height: 26px;
+  fill: rgb(255, 255, 255);
+  transition: left 0.2s ease;
+}
+</style>
+<body class="box-up-page">
+  <main>
+      <div class="bg"><img class="bg-img" src="images/box-bg.png"></div>
+      <div class="box-div">
+          <img class="box-whole" src="images/box.png">
+          <img class="box-front" src="images/box-front.png">
+      </div>
+      <img class="red ghost" src="images/red.png">
+      <img class="blue ghost" src="images/blue.png">
+      <img class="yellow ghost" src="images/yellow.png">
+      <img class="green ghost" src="images/green.png">
+      <img class="pink ghost" src="images/pink.png">
+    </main>
+</body>
 <body>
   <div class="section-4">
+    <h1><em><b>To her surprise,</b></em></h1>
     <p>
+      when she lifted the heavy lid there was no<br>
+      gleam of gold or treasure, and not one<br>
+      beautiful dress! Instead, the gods had<br>
+      packed the box full of all the terrible evils<br>
+      they could think of.
+    </p>
+  </div>
+  <div class="section-4-1">
+    <p>
+      Out of the box poured disease, misery<br>
+      and death, all shaped like tiny buzzing<br>
+      moths. The creatures stung Pandora<br>
+      over and over again and she slammed<br>
+      the lid shut.
     </p>
   </div>
   <section class="slideshow">
@@ -32,6 +251,5 @@
       </div>
     </div>
   </section>
-  <body class="section-4-bg"></body>
 </body>
 </html>
